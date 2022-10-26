@@ -1,13 +1,13 @@
 var quizData = [
     {
-        question: "test"
-        a: "a"
-        b: "b"
-        c: "c"
-        d: "d"  //put questions here and repeat on new lines
-    }
+        question: "test",
+        a: "a",
+        b: "b",
+        c: "c",
+        d: "d", //put questions here and repeat on new lines
+    },
 
-]
+];
 
 var quiz = document.getElementById('quiz')
 var answerEls = document.querySelectorAll('.answer')
@@ -25,5 +25,8 @@ loadQuiz()
 function loadQuiz() {
     var currentQuizdata = quizData[currentQuiz]
     questionE1.innertext = currentQuizdata.question
-
+    a_text.innerText = currentQuizdata.a
+    b_text.innerText = currentQuizdata.b
+    c_text.innerText = currentQuizdata.c
+    d_text.innerText = currentQuizdata.d
 }
