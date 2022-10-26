@@ -24,7 +24,7 @@ let currentQuiz = 0
 let score = 0
 
 loadQuiz()
-
+// Function to replace all the HTML text with the questions
 function loadQuiz() {
 
     deselectAnswers()
@@ -37,7 +37,7 @@ function loadQuiz() {
     c_text.innerText = currentQuizdata.c
     d_text.innerText = currentQuizdata.d
 }
-
+// Deselct the answerrs on start
 function deselectAnswers() {
     answerEls.forEach(answerEl => answerEl.checked = false)
 }
