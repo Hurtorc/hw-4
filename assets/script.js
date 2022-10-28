@@ -1,14 +1,40 @@
 var quizData = [
     {
-        question: "test",
-        a: "a",
-        b: "b",
-        c: "c",
-        d: "d",
+        question: "What was the first commercially successful videogame?",
+        a: "Pong",
+        b: "Pacman",
+        c: "Computer Space",
+        d: "Galaxy Game",
         correct: "a",
         //put questions here and repeat on new lines
     },
-
+    {
+        question: "In what year did the first Star Wars release?",
+        a: "1980",
+        b: "1983",
+        c: "1977",
+        d: "1979",
+        correct: "c",
+        //put questions here and repeat on new lines
+    },
+    {
+        question: "What color shirts are associated Star Trek?",
+        a: "Green Shirts",
+        b: "Yellow Shirts",
+        c: "Blue Shirts",
+        d: "Red Shirts",
+        correct: "d",
+        //put questions here and repeat on new lines
+    },
+    {
+        question: "What videogame has sold the most copies alf all time?",
+        a: "PUBG: Battlegrounds",
+        b: "Minecraft",
+        c: "Grand Theft Auto V",
+        d: "Overwatch",
+        correct: "b",
+        //put questions here and repeat on new lines
+    },
 ];
 
 var quiz = document.getElementById('quiz')
@@ -51,7 +77,7 @@ function getSelected() {
     })
     return answer
 }
-
+// Submit button for questions
 submitBtn.addEventListener('click', () => {
     var answer = getSelected()
     if (answer) {
