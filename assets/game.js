@@ -39,12 +39,14 @@ var quizData = [
 
 var quiz = document.getElementById('quiz')
 var answerEls = document.querySelectorAll('.answer')
-var questionEl = document.getElementById('question')
+const question = document.getElementById('question')
 var a_text = document.getElementById('a_text')
 var b_text = document.getElementById('b_text')
 var c_text = document.getElementById('c_text')
 var d_text = document.getElementById('d_text')
 var submitBtn = document.getElementById('submit')
+
+
 
 let currentQuiz = 0
 let score = 0
@@ -57,7 +59,7 @@ function loadQuiz() {
 
     var currentQuizdata = quizData[currentQuiz]
 
-    questionEl.innertext = currentQuizdata.question
+    question.innertext = currentQuizdata.question
     a_text.innerText = currentQuizdata.a
     b_text.innerText = currentQuizdata.b
     c_text.innerText = currentQuizdata.c
@@ -90,11 +92,33 @@ submitBtn.addEventListener('click', () => {
         if (currentQuiz < quizData.length) {
             loadQuiz()
         } else {
-            quiz.innerHTML = `
-           <h2>You answered ${score}/${quizData.length} questions correctly</h2>
-
-           <button onclick="location.reload()">Reload</button>
-           `
+            quiz.innerHTML =
+                `<h2>You answered ${score}/${quizData.length} questions correctly</h2>`
         }
     }
 })
+//Timer function
+var timeEl = document.querySelector(".time");
+var mainEl = document.getElementById("main");
+
+var secondsLeft = 10;
+
+function setTime() {
+    var timerInterval = setInterval(function () {
+        secondsLeft--;
+        timeEl.textContent = secondsLeft + " seconds left.";
+        if (secondsLeft === 0) {
+            clearInterval(timerInterval);
+            sendMessage();
+        }
+
+    }, 1000);
+}
+
+
+function endGame() {
+    if (timeLeft <= 0) {
+        localStorage.setItem('recentScore', score)
+        return window.location.assign("./score.html")
+    }
+}
