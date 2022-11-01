@@ -60,7 +60,7 @@ function loadQuiz() {
 
     var currentQuizdata = quizData[currentQuiz]
 
-    question.innertText = currentQuizdata.question
+    question.innerText = currentQuizdata.question
     a_text.innerText = currentQuizdata.a
     b_text.innerText = currentQuizdata.b
     c_text.innerText = currentQuizdata.c
