@@ -39,7 +39,7 @@ var quizData = [
 
 var quiz = document.getElementById('quiz')
 var answerEls = document.querySelectorAll('.answer')
-const question = document.getElementById('question')
+var question = document.getElementById('question')
 var a_text = document.getElementById('a_text')
 var b_text = document.getElementById('b_text')
 var c_text = document.getElementById('c_text')
@@ -59,7 +59,7 @@ function loadQuiz() {
 
     var currentQuizdata = quizData[currentQuiz]
 
-    question.innertext = currentQuizdata.question
+    question.innertText = currentQuizdata.question
     a_text.innerText = currentQuizdata.a
     b_text.innerText = currentQuizdata.b
     c_text.innerText = currentQuizdata.c
