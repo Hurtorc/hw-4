@@ -37,8 +37,9 @@ var quizData = [
     },
 ];
 
-var quiz = document.getElementById('quiz')
+
 var answerEls = document.querySelectorAll('.answer')
+var quiz = document.getElementById('quiz')
 var question = document.getElementById('question')
 var a_text = document.getElementById('a_text')
 var b_text = document.getElementById('b_text')
@@ -99,9 +100,9 @@ submitBtn.addEventListener('click', () => {
 })
 //Timer function
 var timeEl = document.querySelector(".time");
-var mainEl = document.getElementById("main");
 
-var secondsLeft = 10;
+
+var secondsLeft = 30;
 
 function setTime() {
     var timerInterval = setInterval(function () {
@@ -114,11 +115,9 @@ function setTime() {
 
     }, 1000);
 }
-
-
-function endGame() {
-    if (timeLeft <= 0) {
-        localStorage.setItem('recentScore', score)
-        return window.location.assign("./score.html")
-    }
+function sendMessage() {
+    timeEl.textContent = "Times Up!";
 }
+
+
+setTime();

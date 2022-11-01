@@ -2,7 +2,9 @@ main {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    flex-direction: column;
 }
+
 
 body {
     background-color: aqua;
@@ -11,7 +13,7 @@ body {
     align-items: center;
     display: flex;
     margin: 0;
-    flex-direction: column;
+
 }
 
 header {
